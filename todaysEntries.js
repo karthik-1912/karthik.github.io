@@ -11,6 +11,13 @@
 
 function todaysEntries(entries) {
 	// Complete the function
+	let date=new Date().toISsstring();
+        current = date.substring(0,10);
+	let answer = entries.filter(item=> item.date.includes(current));
+	
+	let value = answer.map(item => item.name);
+	let final = value.join(',');
+	return final;	
 }
 
 module.exports = todaysEntries;
